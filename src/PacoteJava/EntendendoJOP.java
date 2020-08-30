@@ -14,9 +14,12 @@ public class EntendendoJOP {
         
         num1 = Double.parseDouble(aux);
         
-        JOptionPane.showMessageDialog(null, "Valor do Primeiro Número"+num1);
+        aux = JOptionPane.showInputDialog(null, "insira o Segundo Numero");
+        num2 = Double.parseDouble(aux);
         
+        resp = num1+num2;
         
+        JOptionPane.showMessageDialog(null, "A soma é "+resp);
         
     }
 }
