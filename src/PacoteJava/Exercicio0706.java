@@ -1,15 +1,18 @@
 
 package PacoteJava;
 // Variaveis: 
-// A = Salário Bruto
-// B = Salário Liquido
-// C = Alíquota 
-// D = Salário Bruto / Alíquota
+// A - Salário Bruto
+// B - Salário Liquido
+// C - Alíquota 
+// D - Salário Bruto / Alíquota
 import javax.swing.*;
 
 public class Exercicio0706 {
     public static void main(String args []) {
-        double A = 0;
+        reiniciar();
+    }
+   public static void reiniciar() {
+                   double A = 0;
         double B = 0;
         int C = 0;      
         String aux="";
@@ -25,7 +28,7 @@ public class Exercicio0706 {
        if (A < 465.65) {
            String erro = String.format("Desculpe");
            JOptionPane.showMessageDialog(null, "Salário Invalido", erro,0); 
-           System.exit(0);
+           reiniciar();
        }
        
        else if (A >= 465.65 && A <= 965.67) { 
@@ -97,17 +100,21 @@ public class Exercicio0706 {
                 "Desconto do INSS: R$%,.2f%nO Desconto Maximo é de: R$ 354,07", A, B, D);
           JOptionPane.showMessageDialog(null, mensagem, "Meu INSS",1);
           System.exit(0);      
-                                //Outra Resolução             
+             
              //JOptionPane.showMessageDialog(null, "O Desconto Maximo é de: R$ 354,07","Meu INSS", JOptionPane.PLAIN_MESSAGE);
              //System.exit(0);
             }
         }
         catch (NumberFormatException ex) {
-             JOptionPane.showMessageDialog(null,"Por favor insira somente valores", "Meu INSS", JOptionPane.ERROR_MESSAGE);
+             JOptionPane.showMessageDialog(null,"Por favor insira somente valores", "Meu INSS", JOptionPane.ERROR_MESSAGE);     
+             reiniciar();
         }
-         
-       
+         catch (NullPointerException ex) {
+             System.exit(0);
+        }
         }
     }
   
+   
+
     
