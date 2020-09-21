@@ -79,7 +79,7 @@ try {
              voltar();   
     }
     catch (NullPointerException ex) {
-             System.exit(0);
+             
     }
     }
 }
