@@ -1,7 +1,6 @@
 
 package AtividadeDS3;
 
-import javax.swing.*;
 
 public class Exercicio4 {
     
